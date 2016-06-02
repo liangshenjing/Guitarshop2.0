@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.action.extension=action,," value="" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="addGuitar" class="com.guitar.action.GuitarOperationAction" method="addGuitar">
+			<result name="success">/backstage/GuitarAddSuccess.html</result>
+			<result name="error">/backstage/404.html</result>
+		</action>
+		<action name="searchGuitar" class="com.guitar.action.GuitarOperationAction" method="searchGuitar">
+			<result name="success">/backstage/GuitarSearch.jsp</result>
+			<result name="error">/backstage/404.html</result>
+		</action>
+		<action name="delGuitar" class="com.guitar.action.GuitarOperationAction" method="delGuitar">
+			<result name="success">/backstage/GuitarSearch.jsp</result>
+			<result name="error">/backstage/404.html</result>	
+		</action>
+	</package>
+</struts>
